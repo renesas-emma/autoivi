@@ -213,4 +213,42 @@ After system ACC ON, the whole system shold be available to end users with in a 
 
 ### KPI define ###
 Usually the KPI of system boot time depends on device manufacture's spec, and usually effected by base system. For a RTOS system, it usually available within 2 or 3 seconds; For a Linux based system, usually a X11/Wayland based UI should cost quite a long time to load, and a UI based on OpenGL will need much longer load time. An android based system usually cost 20 to 40 seconds to boot in case of none optimiziation.
+**Actually target:**
+As a sample, here listed some reasonable target with actual product, SoC with 200MHz clock
+- RTOS system with a low-resolution TN LCD display or segment LCD Display
+  System boot time: 2s
+  Audio output available under FM radio: 3s
+  Audio output available under USB mp3 files playback: 5s
+- Linux based system, with WVGA display. without navigation function, SoC with 800MHz dual Coretx-A7 cores.
+  System boot time to cation message(Disclaimer): 6s
+  Audio output available under FM radio: 3.5s
+  Audio output available under USB audio playback: 8s
+- Android based navigation system, with XGA display, SoC with 1.1GHz dual Coretex-A15
+  System boot time to home screen: 13s
+  Audio output available under FM radio: 3.5s
+  Audio output available under USB audio playback: 16s
+
+### Implementaion ###
+- Hardware optimiziation and MCU optimiziation
+  After ACC ON, MCU will perform some
 ### Fast boot ###
+
+
+Power Sequence and Testing
+----------------------------------
+
+
+
+Flash lifecycle
+-----------
+
+
+Failesafe
+-----------
+
+System Logger
+----------
+
+
+System upgrade and recovery
+------------
